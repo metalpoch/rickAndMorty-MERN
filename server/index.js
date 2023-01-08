@@ -1,4 +1,5 @@
 import express from "express"
+import cors from "cors"
 import morgan from "morgan"
 import mongoose from "mongoose"
 import { config } from "dotenv"
@@ -15,6 +16,7 @@ const db = process.env.ATLAS_URI
 
 // Middlewares
 const app = express()
+app.use(cors())
 app.use(express.json())
 app.use(morgan("dev"))
 app.use("/API/species", species)
