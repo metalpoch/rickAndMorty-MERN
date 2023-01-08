@@ -7,7 +7,7 @@ const NavbarNavigate = () => {
   return (
     <Navbar bg="primary" variant="dark" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#home">Rick And Morty MERN</Navbar.Brand>
+        <Navbar.Brand>Rick And Morty MERN</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
           <Nav className="ms-auto">
