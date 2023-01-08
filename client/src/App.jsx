@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css"
 import { useState, useEffect } from "react";
 import NavbarNavigate from "./components/NavbarNavigate"
 import CharacterCard from "./components/CharacterCard"
@@ -19,7 +20,7 @@ const App = () => {
   return (
     <>
       <NavbarNavigate />
-      <main className="bg-dark text-white">
+      <main className="text-white">
         <Container className="pt-3">
           <Row>
             {characters.map((character) => {
