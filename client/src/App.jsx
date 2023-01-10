@@ -4,17 +4,19 @@ import "./App.css"
 import { Container, Row, Col } from "react-bootstrap";
 import NavbarNavigate from "./components/NavbarNavigate"
 import FilterCharacters from "./components/FilterCharacters";
+import Status from "./components/Status";
 import CharacterCard from "./components/CharacterCard"
 
+
 const App = () => {
-  const [allCharacters, setAllCharacters] = useState([]);
+  const [cacheCharacters, setCacheCharacters] = useState([]);
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:5000/API")
       .then((res) => res.json())
       .then((res) => {
-        setAllCharacters(res);
+        setCacheCharacters(res);
         setCharacters(res);
       })
       .catch((error) => {
@@ -23,9 +25,9 @@ const App = () => {
   }, []);
 
   const handleCharacter = (text) => {
-    if (!text) setCharacters(allCharacters)
+    if (!text) setCharacters(cacheCharacters)
     text = text.toLowerCase(text)
-    const result = allCharacters
+    const result = cacheCharacters
       .map((character) => {
         const isInclude = character.name.toLowerCase().includes(text)
         return isInclude
@@ -42,7 +44,12 @@ const App = () => {
       <NavbarNavigate />
       <main className="text-white">
         <Container fluid className="pt-3">
-          <FilterCharacters handleCharacter={handleCharacter} />
+          <Row>
+            <Col xs={"xl"}>
+              <FilterCharacters handleCharacter={handleCharacter} />
+            </Col>
+            <Col><Status characters={characters}/></Col>
+          </Row>
           <Row>
             {characters.map((character, i) => {
               return (
