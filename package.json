@@ -1,0 +1,28 @@
+{
+  "name": "rick-and-morty",
+  "version": "1.0.0",
+  "description": "A simple application with some characters from the tv series Rick and Morty with the Mern stack",
+  "scripts": {
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/metalpoch/rickAndMorty-MERN.git"
+  },
+  "keywords": [
+    "MERN",
+    "RESTFULL",
+    "APIREST"
+  ],
+  "author": "Keiber Urbila <keiberup.dev@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/metalpoch/rickAndMorty-MERN/issues"
+  },
+  "homepage": "https://github.com/metalpoch/rickAndMorty-MERN#readme",
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
