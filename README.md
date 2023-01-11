@@ -1,4 +1,4 @@
-# Traffic-Access-Dashboard 
+# rickAndMorty-MERN
 
 *A simple MERN app created with Vite and MongoDB Atlas*
 
