@@ -1,8 +1,8 @@
 # Traffic-Access-Dashboard 
 
-*A simple MERN app created with Vite and MongoDB Atlas Atlas*
+*A simple MERN app created with Vite and MongoDB Atlas*
 
-See the card of your favorite characters and their status. the database contains only a small part of the Rick and Morty API data, as it required the use of the MERN stack.
+See the card of your favorite characters and their status. the database contains only a small part of the Rick and Morty API data.
 Also, the database used is read-only, so the registry cannot be modified.
 The frontend of this app works on the [localhost:8000](http://localhost:8000/) and the backend runs on [localhost:5000](http://localhost:5000/).
 
@@ -30,5 +30,3 @@ cd ../  # to rickAndMorty-MERN directory
 ```bash
 npm run dev
 ```
-## Licence
-[MIT](https://choosealicense.com/licenses/mit/)
