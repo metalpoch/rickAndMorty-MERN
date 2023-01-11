@@ -3,11 +3,9 @@ import cors from "cors"
 import morgan from "morgan"
 import mongoose from "mongoose"
 import { config } from "dotenv"
-//
+
 // Routes
 import characters from "./routes/characters.js"
-import status from "./routes/status.js"
-import species from "./routes/species.js"
 
 // Variables
 config({path: "./config.env"})
@@ -19,8 +17,6 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 app.use(morgan("dev"))
-app.use("/API/species", species)
-app.use("/API/status", status)
 app.use("/API", characters)
 
 // Connection with MongoDB

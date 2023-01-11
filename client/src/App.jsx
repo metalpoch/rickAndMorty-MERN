@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css"
+import { API_URL } from "./config";
 import { Container, Row, Col } from "react-bootstrap";
 import NavbarNavigate from "./components/NavbarNavigate"
 import FilterCharacters from "./components/FilterCharacters";
@@ -13,7 +14,7 @@ const App = () => {
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/API")
+    fetch(API_URL)
       .then((res) => res.json())
       .then((res) => {
         setCacheCharacters(res);
